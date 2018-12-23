@@ -1,0 +1,14 @@
+//
+//这个less主要为了增加一些内边距
+//
+.page-contents{
+	padding-top:20px;
+	padding-bottom:40px;
+
+    @media(max-width:@screen-xs-max){
+	    [class*="col-"]{
+		    clear:both;
+		    padding-bottom:40px;
+	    }
+    }
+}

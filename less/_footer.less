@@ -1,0 +1,36 @@
+ul.social{
+	//去掉ul里面的内外边距
+	margin:0;
+	padding:0;
+	//布局宽度拉伸到100%
+	width: 100%;
+	//中间对齐
+	text-align: center;
+	> li{
+		//列表项设置成
+		display: inline-block;
+		> a{
+			display: inline-block;
+			font-size: 18px;
+			line-height: 30px;
+			//使用mixins.less里面的混入.square, 将宽度, 高度设置成30px见方
+			.square(30px);
+			//使图标边缘呈圆形
+			border-radius:36px;
+			//设置背景色, 前景色, 外边距
+			background-color: @gray-light;
+			color:#fff;
+			margin:0 3px 3px 0;
+			//去掉li的下划线, 背景改成灰色
+			&:hover{
+				text-decoration:none;
+				background-color:@link-hover-color;
+			}
+		}
+	}
+}
+footer[role="contentinfo"]{
+	padding-top:24px;
+	padding-bottom:36px;
+	text-align:center;
+}
